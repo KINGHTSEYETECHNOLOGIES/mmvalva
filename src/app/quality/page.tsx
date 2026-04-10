@@ -77,7 +77,7 @@ export default function QualityPage() {
               </div>
               <div className="rounded-xl border border-accent/40 bg-accent/10 p-5 backdrop-blur-sm sm:col-span-2 group hover:bg-accent/20 transition-all cursor-crosshair">
                 <p className="text-sm leading-relaxed text-white text-center italic transition-transform group-hover:scale-[1.02]">
-                  "Internal testing reports, dimensional proofs, and metallurgical logs for every production lot are available directly to engineering clients upon delivery."
+                  &quot;Internal testing reports, dimensional proofs, and metallurgical logs for every production lot are available directly to engineering clients upon delivery.&quot;
                 </p>
               </div>
             </div>
