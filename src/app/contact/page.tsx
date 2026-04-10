@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 
-import { PageShell } from "@/components/page-shell";
-import { Reveal } from "@/components/reveal";
-import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone, MessageSquare } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact | M.M. Valves",
@@ -12,72 +10,117 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <PageShell
-      eyebrow="Contact"
-      title="Start the engineering discussion"
-      intro="Share your product dimensions, volume requirements, and application specifics. Our technical team will respond with a commercial proposal."
-      mode="hero"
-    >
-      <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr]">
-        <Reveal delay={0.1}>
-          <form className="grid gap-5 md:grid-cols-2 p-8 rounded-3xl bg-[#f8fbff] border border-line shadow-sm" aria-label="Inquiry form">
-            <h3 className="text-xl font-black uppercase text-steel-strong md:col-span-2 mb-2">Technical Inquiry</h3>
-            <input className="rounded-xl border border-line bg-white p-4 text-sm text-steel-strong shadow-sm focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all" placeholder="Company Name *" required />
-            <input className="rounded-xl border border-line bg-white p-4 text-sm text-steel-strong shadow-sm focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all" placeholder="Contact Person *" required />
-            <input className="rounded-xl border border-line bg-white p-4 text-sm text-steel-strong shadow-sm focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all" placeholder="Email Address *" type="email" required />
-            <input className="rounded-xl border border-line bg-white p-4 text-sm text-steel-strong shadow-sm focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all" placeholder="Phone Number" />
-            <input className="rounded-xl border border-line bg-white p-4 text-sm text-steel-strong shadow-sm md:col-span-2 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all" placeholder="Application or Engine Model *" required />
-            <textarea className="min-h-32 rounded-xl border border-line bg-white p-4 text-sm text-steel-strong shadow-sm md:col-span-2 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all" placeholder="Required volume, dimensions, logic specifications... *" required />
-            
-            <button className="flex min-w-[200px] items-center justify-center gap-2 rounded-xl bg-accent px-6 py-4 text-xs font-bold uppercase tracking-[0.1em] text-white shadow-md hover:bg-accent/90 transition-colors md:justify-self-start" type="submit">
-              Submit Details
-              <ArrowRight className="h-4 w-4" />
-            </button>
-          </form>
-        </Reveal>
+    <main className="flex flex-col min-h-screen bg-white">
+      {/* PAGE HEADER */}
+      <section className="bg-slate-900 pt-24 pb-16 border-b-4 border-red-700">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+          <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded bg-slate-800 text-slate-300 text-xs font-bold uppercase tracking-wider mb-6">
+            <MessageSquare className="w-4 h-4" />
+            <span>Contact Us</span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight mb-6">
+            Start the Engineering Discussion
+          </h1>
+          <p className="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-3xl mx-auto">
+            Share your product dimensions, volume requirements, and application specifics. Our technical team will respond with a commercial proposal.
+          </p>
+        </div>
+      </section>
 
-        <Reveal delay={0.2}>
-          <div className="flex h-full flex-col justify-between rounded-3xl bg-steel-strong p-8 text-white shadow-lg relative overflow-hidden">
-            <div className="absolute inset-0 bg-grid-slate-600 [mask-image:linear-gradient(0deg,transparent,black)] opacity-20 pointer-events-none"></div>
+      {/* CORE INFO */}
+      <section className="py-20 lg:py-28 bg-white border-b border-slate-200">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr]">
             
-            <div className="relative z-10">
-              <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-accent mb-6">Corporate Office</h3>
-              <ul className="space-y-6">
+            {/* Form Section */}
+            <div className="bg-slate-50 p-8 lg:p-12 border border-slate-200 rounded-lg">
+              <h2 className="text-2xl font-black uppercase text-slate-900 mb-8 border-b-2 border-red-700 inline-block pb-2">
+                Technical Inquiry
+              </h2>
+              <form className="grid gap-6 md:grid-cols-2" aria-label="Inquiry form">
+                <div className="flex flex-col gap-2">
+                  <label className="text-xs font-bold text-slate-700 uppercase tracking-widest">Company Name *</label>
+                  <input className="border border-slate-300 bg-white p-4 text-slate-900 focus:border-red-700 outline-none transition-colors rounded" required />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label className="text-xs font-bold text-slate-700 uppercase tracking-widest">Contact Person *</label>
+                  <input className="border border-slate-300 bg-white p-4 text-slate-900 focus:border-red-700 outline-none transition-colors rounded" required />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label className="text-xs font-bold text-slate-700 uppercase tracking-widest">Email Address *</label>
+                  <input className="border border-slate-300 bg-white p-4 text-slate-900 focus:border-red-700 outline-none transition-colors rounded" type="email" required />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label className="text-xs font-bold text-slate-700 uppercase tracking-widest">Phone Number</label>
+                  <input className="border border-slate-300 bg-white p-4 text-slate-900 focus:border-red-700 outline-none transition-colors rounded" />
+                </div>
+                <div className="flex flex-col gap-2 md:col-span-2">
+                  <label className="text-xs font-bold text-slate-700 uppercase tracking-widest">Application or Engine Model *</label>
+                  <input className="border border-slate-300 bg-white p-4 text-slate-900 focus:border-red-700 outline-none transition-colors rounded" required />
+                </div>
+                <div className="flex flex-col gap-2 md:col-span-2">
+                  <label className="text-xs font-bold text-slate-700 uppercase tracking-widest">Required Volume & Specifications *</label>
+                  <textarea className="min-h-[160px] border border-slate-300 bg-white p-4 text-slate-900 focus:border-red-700 outline-none transition-colors rounded resize-y" required></textarea>
+                </div>
+                
+                <button className="inline-flex justify-center items-center gap-2 bg-red-700 hover:bg-red-800 text-white font-bold uppercase tracking-wider px-8 py-4 rounded transition-colors md:col-span-2 md:justify-self-start" type="submit">
+                  Submit Details
+                  <ArrowRight className="h-4 w-4" />
+                </button>
+              </form>
+            </div>
+
+            {/* Contact Details Section */}
+            <div className="bg-slate-900 p-8 lg:p-12 border border-slate-800 rounded-lg text-white">
+              <h2 className="text-2xl font-black uppercase text-white mb-8 border-b-2 border-red-700 inline-block pb-2">
+                Corporate Office
+              </h2>
+              
+              <ul className="space-y-10">
                 <li className="flex items-start gap-4">
-                  <MapPin className="h-5 w-5 shrink-0 text-white/50 mt-1" />
+                  <div className="bg-slate-800 p-3 rounded text-red-500">
+                    <MapPin className="h-6 w-6" />
+                  </div>
                   <div>
-                    <h4 className="font-bold uppercase tracking-wider mb-1 text-sm text-[#bfd0e2]">Headquarters</h4>
-                    <p className="text-sm leading-relaxed text-white/80">123 Industrial Estate Road<br/>Sector 10, New Delhi 110001<br/>India</p>
+                    <h3 className="font-bold uppercase tracking-widest text-sm text-slate-400 mb-2">Headquarters</h3>
+                    <p className="text-lg leading-relaxed text-slate-200">
+                      123 Industrial Estate Road<br/>Sector 10, New Delhi 110001<br/>India
+                    </p>
                   </div>
                 </li>
                 
-                <li className="flex items-start gap-4 border-t border-white/10 pt-6">
-                  <Mail className="h-5 w-5 shrink-0 text-white/50 mt-1" />
+                <li className="flex items-start gap-4">
+                  <div className="bg-slate-800 p-3 rounded text-red-500">
+                    <Mail className="h-6 w-6" />
+                  </div>
                   <div>
-                    <h4 className="font-bold uppercase tracking-wider mb-1 text-sm text-[#bfd0e2]">Sales & Export Inquiries</h4>
-                    <a href="mailto:contact@placeholder.com" className="text-sm leading-relaxed text-white/80 hover:text-accent transition-colors break-all">
+                    <h3 className="font-bold uppercase tracking-widest text-sm text-slate-400 mb-2">Sales & Export Inquiries</h3>
+                    <a href="mailto:contact@placeholder.com" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors">
                       contact@placeholder.com
                     </a>
                   </div>
                 </li>
                 
-                <li className="flex items-start gap-4 border-t border-white/10 pt-6">
-                  <Phone className="h-5 w-5 shrink-0 text-white/50 mt-1" />
+                <li className="flex items-start gap-4">
+                  <div className="bg-slate-800 p-3 rounded text-red-500">
+                    <Phone className="h-6 w-6" />
+                  </div>
                   <div>
-                    <h4 className="font-bold uppercase tracking-wider mb-1 text-sm text-[#bfd0e2]">Direct Lines</h4>
-                    <a href="tel:+910000000000" className="text-sm leading-relaxed text-white/80 hover:text-accent transition-colors block">
+                    <h3 className="font-bold uppercase tracking-widest text-sm text-slate-400 mb-2">Direct Lines</h3>
+                    <a href="tel:+910000000000" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors block">
                       +91 00 0000 0000
                     </a>
-                    <a href="tel:+911111111111" className="text-sm leading-relaxed text-white/80 hover:text-accent transition-colors block mt-1">
+                    <a href="tel:+911111111111" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors block mt-2">
                       +91 11 1111 1111
                     </a>
                   </div>
                 </li>
               </ul>
             </div>
+
           </div>
-        </Reveal>
-      </div>
-    </PageShell>
+        </div>
+      </section>
+    </main>
   );
 }

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 
-import { PageShell } from "@/components/page-shell";
-import { Reveal } from "@/components/reveal";
-import { Ruler, Activity, Shield, Server, Repeat, Cog } from "lucide-react";
+import { Ruler, Activity, Shield, Server, Repeat, Cog, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Quality | M.M. Valves",
@@ -11,79 +9,88 @@ export const metadata: Metadata = {
 };
 
 const checks = [
-  { name: "Dimensional inspection", icon: Ruler, desc: "Micrometer clearance checks against CAD blueprints." },
-  { name: "Surface finish analysis", icon: Activity, desc: "Profilometer testing to govern roughness average (Ra)." },
-  { name: "Strength validation", icon: Shield, desc: "Tensile breaking strength and stem deflection resistance." },
-  { name: "Process control (SPC)", icon: Server, desc: "Hourly chart monitoring to preempt deviation." },
-  { name: "Batch consistency", icon: Repeat, desc: "Material tracing through assigned lot codes." },
-  { name: "Performance reliability", icon: Cog, desc: "Heat cycling tests for dynamic endurance guarantees." },
+  { name: "Dimensional Inspection", icon: Ruler, desc: "Micrometer clearance checks against precise CAD blueprints." },
+  { name: "Surface Finish Analysis", icon: Activity, desc: "Profilometer testing to govern roughness average (Ra)." },
+  { name: "Strength Validation", icon: Shield, desc: "Tensile breaking strength and stem deflection resistance." },
+  { name: "Process Control (SPC)", icon: Server, desc: "Hourly chart monitoring to preempt deviation." },
+  { name: "Batch Consistency", icon: Repeat, desc: "Material tracing through assigned lot codes." },
+  { name: "Performance Reliability", icon: Cog, desc: "Heat cycling tests for dynamic endurance guarantees." },
 ];
 
 export default function QualityPage() {
   return (
-    <PageShell
-      eyebrow="Quality Standards"
-      title="Inspection-first quality assurance"
-      intro="Every batch is validated for dimensional accuracy, metallurgical integrity, and surface quality before dispatch. We don’t guess; we measure."
-      mode="scan"
-    >
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {checks.map((item, idx) => {
-          const Icon = item.icon;
-          return (
-            <Reveal key={item.name} delay={0.1 * idx}>
-              <article className="flex h-full flex-col justify-between rounded-2xl border border-line/50 bg-[#fbfdfe] p-6 shadow-sm transition hover:border-line hover:shadow-md">
-                <div>
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#edf3f9] text-accent shadow-sm border border-line">
-                    <Icon className="h-6 w-6" />
+    <main className="flex flex-col min-h-screen bg-white">
+      {/* PAGE HEADER */}
+      <section className="bg-slate-900 pt-24 pb-16 border-b-4 border-red-700">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+          <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded bg-slate-800 text-slate-300 text-xs font-bold uppercase tracking-wider mb-6">
+            <CheckCircle className="w-4 h-4" />
+            <span>Quality Standards</span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight mb-6">
+            Inspection-First Quality Assurance
+          </h1>
+          <p className="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-3xl mx-auto">
+            Every batch is validated for dimensional accuracy, metallurgical integrity, and surface quality before dispatch. We don’t guess; we measure.
+          </p>
+        </div>
+      </section>
+
+      {/* CHECKS GRID */}
+      <section className="py-20 lg:py-28 bg-white border-b border-slate-200">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {checks.map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <article key={item.name} className="flex flex-col bg-slate-50 border border-slate-200 p-8 rounded-lg transition-colors hover:border-slate-800">
+                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded bg-slate-200 text-slate-700">
+                    <Icon className="h-7 w-7" />
                   </div>
-                  <h3 className="text-lg font-bold text-steel-strong leading-tight mb-2 uppercase tracking-wide">
+                  <h3 className="text-xl font-bold text-slate-900 leading-tight mb-3 uppercase tracking-wide">
                     {item.name}
                   </h3>
-                  <p className="text-sm text-muted leading-relaxed">
+                  <p className="text-slate-600 leading-relaxed flex-1">
                     {item.desc}
                   </p>
-                </div>
-                
-                <div className="mt-6 pt-4 border-t border-line/60">
-                  <span className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-accent">Status: Active Protocol</span>
-                </div>
-              </article>
-            </Reveal>
-          );
-        })}
-      </div>
+                  
+                  <div className="mt-8 pt-4 border-t border-slate-200">
+                    <span className="text-xs font-bold uppercase tracking-widest text-red-700">Active Protocol</span>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
 
-      <Reveal delay={0.6}>
-        <div className="mt-16 rounded-2xl bg-steel-strong p-8 sm:p-12 text-white relative overflow-hidden shadow-lg">
-          <div className="absolute inset-0 border-[1px] border-white/10 rounded-2xl m-2 pointer-events-none"></div>
-          <div className="relative z-10 grid gap-8 lg:grid-cols-[1fr_2fr] items-center">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-3">Traceability</p>
-              <h2 className="text-3xl font-black uppercase leading-tight mb-4">100% Tracking <br/>& Validation</h2>
-              <p className="text-sm leading-relaxed text-white/70">
-                We maintain an unbroken chain of custody from incoming raw material to final heat treatment, ensuring every batch meets explicit structural integrity requirements before leaving our facility.
-              </p>
-            </div>
-            
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-xl border border-white/20 bg-white/5 p-5 backdrop-blur-sm transition-colors hover:bg-white/10">
-                <span className="text-xs uppercase tracking-widest text-[#bfd0e2] font-bold">Material Logs</span>
-                <p className="mt-2 text-lg font-bold text-white">Full Melt Documentation</p>
-              </div>
-              <div className="rounded-xl border border-white/20 bg-white/5 p-5 backdrop-blur-sm transition-colors hover:bg-white/10">
-                <span className="text-xs uppercase tracking-widest text-[#bfd0e2] font-bold">Defect Avoidance</span>
-                <p className="mt-2 text-lg font-bold text-white">Zero-Tolerance Sorting</p>
-              </div>
-              <div className="rounded-xl border border-accent/40 bg-accent/10 p-5 backdrop-blur-sm sm:col-span-2 group hover:bg-accent/20 transition-all cursor-crosshair">
-                <p className="text-sm leading-relaxed text-white text-center italic transition-transform group-hover:scale-[1.02]">
-                  &quot;Internal testing reports, dimensional proofs, and metallurgical logs for every production lot are available directly to engineering clients upon delivery.&quot;
+          <div className="mt-16 bg-slate-900 rounded-lg p-8 lg:p-12 text-white shadow-xl">
+            <div className="grid gap-12 lg:grid-cols-[1fr_1.5fr] items-center">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-widest text-red-500 mb-4">Traceability</p>
+                <h2 className="text-3xl sm:text-4xl font-black uppercase leading-tight mb-6">100% Tracking <br/>& Validation</h2>
+                <p className="text-lg leading-relaxed text-slate-300">
+                  We maintain an unbroken chain of custody from incoming raw material to final heat treatment, ensuring every batch meets explicit structural integrity requirements before leaving our facility.
                 </p>
+              </div>
+              
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div className="bg-slate-800 border border-slate-700 p-6 rounded transition-colors hover:border-slate-500">
+                  <span className="text-xs uppercase tracking-widest text-slate-400 font-bold">Material Logs</span>
+                  <p className="mt-3 text-xl font-bold text-white uppercase">Full Melt Documentation</p>
+                </div>
+                <div className="bg-slate-800 border border-slate-700 p-6 rounded transition-colors hover:border-slate-500">
+                  <span className="text-xs uppercase tracking-widest text-slate-400 font-bold">Defect Avoidance</span>
+                  <p className="mt-3 text-xl font-bold text-white uppercase">Zero-Tolerance Sorting</p>
+                </div>
+                <div className="sm:col-span-2 bg-red-900/30 border border-red-800 p-6 rounded">
+                  <p className="text-lg leading-relaxed text-red-100 font-medium text-center">
+                    &quot;Internal testing reports, dimensional proofs, and metallurgical logs for every production lot are available directly to engineering clients upon delivery.&quot;
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </Reveal>
-    </PageShell>
+      </section>
+    </main>
   );
 }
