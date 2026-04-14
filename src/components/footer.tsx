@@ -15,7 +15,7 @@ export default function Footer() {
                 alt="M.M. Valves symbol"
                 width={44}
                 height={44}
-                className="h-11 w-11 object-contain"
+                className="h-auto w-11 object-contain"
               />
             </span>
             <Image

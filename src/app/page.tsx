@@ -198,6 +198,7 @@ export default function HomePage() {
                 src="/home-quality-lab.jpg"
                 alt="Quality lab and manufacturing facility"
                 fill
+                loading="eager"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
