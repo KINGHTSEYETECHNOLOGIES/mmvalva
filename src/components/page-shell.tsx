@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import Image from "next/image";
 import SiteHeader from "./site-header";
 import { Wrench } from "lucide-react";
 
@@ -9,6 +10,7 @@ type PageShellProps = {
   intro: string;
   children: ReactNode;
   mode?: "hero" | "exploded" | "scan";
+  imageSrc?: string;
 };
 
 export function PageShell({
@@ -17,6 +19,7 @@ export function PageShell({
   intro,
   children,
   mode = "hero",
+  imageSrc,
 }: PageShellProps) {
   const visualLabel =
     mode === "exploded"
@@ -54,11 +57,15 @@ export function PageShell({
               </div>
               
               <div className="flex h-full min-h-[380px] w-full items-center justify-center rounded border border-slate-700 bg-slate-800 text-center relative overflow-hidden shadow-xl">
-                <div className="relative z-10 flex flex-col items-center p-6 text-slate-400">
-                  <Wrench className="h-10 w-10 text-slate-500 mb-4" />
-                  <p className="text-xs uppercase tracking-widest font-bold text-slate-300">{visualLabel}</p>
-                  <p className="mt-3 text-sm font-medium">Render 3D model or high-res photography here</p>
-                </div>
+                {imageSrc ? (
+                  <Image src={imageSrc} alt={title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                ) : (
+                  <div className="relative z-10 flex flex-col items-center p-6 text-slate-400">
+                    <Wrench className="h-10 w-10 text-slate-500 mb-4" />
+                    <p className="text-xs uppercase tracking-widest font-bold text-slate-300">{visualLabel}</p>
+                    <p className="mt-3 text-sm font-medium">High-quality product visualization</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>

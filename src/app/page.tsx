@@ -45,18 +45,22 @@ const productFamilies = [
   {
     title: "Diesel Engine Valves",
     copy: "Heavy-duty valves built for maximum load and heat resistance in commercial applications.",
+    image: "/ENGINE VALVE GUIDE.jpg",
   },
   {
     title: "Automotive Engine Valves",
     copy: "Precision valves precision-engineered for passenger vehicles and light trucks.",
+    image: "/Automotive Engine Valve.jpg",
   },
   {
     title: "Industrial Valves",
     copy: "Robust designs for stationary engines, generators, and heavy machinery.",
+    image: "/Cylinder Sleeve.jpg",
   },
   {
     title: "Custom Solutions",
     copy: "Manufactured exactly to your blueprints, materials, and specialized requirements.",
+    image: "/engine-valves inlet amd Ex.jpg",
   },
 ];
 
@@ -90,9 +94,10 @@ export default function HomePage() {
           <div className="flex-1 w-full relative">
             <div className="aspect-video lg:aspect-[4/3] rounded-lg border-4 border-slate-300 overflow-hidden shadow-lg bg-slate-200 relative">
               <Image
-                src="/images/home/home-hero-factory.jpg"
+                src="/home-hero-factory.jpg"
                 alt="Factory manufacturing setup"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
                 priority
               />
@@ -146,11 +151,14 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-6">
             {productFamilies.map((product, index) => (
               <div key={index} className="flex flex-col sm:flex-row gap-6 bg-slate-800 p-6 sm:p-8 rounded-lg border border-slate-700">
-                {/* Product Image Placeholder */}
-                <div className="w-full sm:w-1/3 aspect-square bg-slate-700 rounded flex items-center justify-center border border-slate-600 flex-shrink-0">
-                  <p className="text-slate-500 text-xs font-bold uppercase tracking-widest text-center px-4">
-                    [ Valvce Image ]
-                  </p>
+                <div className="w-full sm:w-1/3 aspect-square bg-slate-700 rounded border border-slate-600 flex-shrink-0 relative overflow-hidden">
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 33vw"
+                    className="object-cover"
+                  />
                 </div>
                 <div className="flex flex-col justify-center">
                   <h3 className="text-2xl font-bold uppercase tracking-wide mb-3">{product.title}</h3>
@@ -187,9 +195,10 @@ export default function HomePage() {
             {/* Facility Image Placeholder */}
             <div className="hidden lg:flex flex-1 bg-slate-800 items-center justify-center min-h-[400px] relative">
               <Image
-                src="/images/home/home-quality-lab.jpg"
+                src="/home-quality-lab.jpg"
                 alt="Quality lab and manufacturing facility"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>

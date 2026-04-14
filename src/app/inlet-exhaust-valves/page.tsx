@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-
 import { PageShell } from "@/components/page-shell";
 
 export const metadata: Metadata = {
@@ -15,6 +14,7 @@ export default function InletExhaustValvesPage() {
       title="Inlet and Exhaust Valve Manufacturer"
       intro="Inlet and exhaust valves engineered for airflow efficiency, heat durability, and application-specific reliability."
       mode="exploded"
+      imageSrc="/engine-valves inlet amd Ex.jpg"
     >
       <div className="grid gap-4 md:grid-cols-2">
         <article className="rounded-xl edge-line bg-[#f8fbff] p-5">

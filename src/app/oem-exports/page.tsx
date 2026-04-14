@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-
 import { PageShell } from "@/components/page-shell";
 
 export const metadata: Metadata = {
@@ -15,6 +14,7 @@ export default function OemExportsPage() {
       title="Reliable supply for domestic and global buyers"
       intro="We support OEM and aftermarket customers with dependable manufacturing and export operations under AJ Automotive."
       mode="hero"
+      imageSrc="/MY BRAND EMGINE VALVE INLET AND EXHAUST.jpg"
     >
       <div className="grid gap-4 md:grid-cols-2">
         <article className="rounded-xl edge-line bg-[#f8fbff] p-5">

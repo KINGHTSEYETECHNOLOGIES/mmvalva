@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import Image from "next/image";
 import { Ruler, Activity, Shield, Server, Repeat, Cog, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -22,7 +22,16 @@ export default function QualityPage() {
     <main className="flex flex-col min-h-screen bg-white">
       {/* PAGE HEADER */}
       <section className="bg-slate-900 pt-24 pb-16 border-b-4 border-red-700">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center relative">
+          <div className="absolute inset-0 -top-48 -z-10 h-96 overflow-hidden rounded-lg opacity-20">
+            <Image
+              src="/Quality Inspection .jpg"
+              alt="Quality inspection facility"
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+          </div>
           <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded bg-slate-800 text-slate-300 text-xs font-bold uppercase tracking-wider mb-6">
             <CheckCircle className="w-4 h-4" />
             <span>Quality Standards</span>

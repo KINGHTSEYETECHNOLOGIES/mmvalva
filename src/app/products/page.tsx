@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-
-import { ArrowRight, Settings2, Truck, PackageSearch } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Truck, PackageSearch } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -15,30 +15,35 @@ const products = [
     app: "Heavy-duty commercial & industrial diesel applications",
     desc: "Built to withstand the enormous thermal loads and extended service cycles demanded by mass-moving transport, agricultural machinery, and heavy industrial machinery.",
     features: ["Bimetallic friction welding", "Stellite armored seats", "Chrome-plated stems"],
+    image: "/images/Products/Diesel Engine Valves.jpg",
   },
   {
     title: "Automotive Engine Valves",
     app: "Passenger & light commercial vehicles",
     desc: "High-volume, production-ready solutions optimized for fuel efficiency, low-noise sealing, and high-RPM thermal stability required by modern passenger cabins.",
     features: ["Nitrided finish options", "Induction hardened stems", "Precision concentricity"],
+    image: "/images/Products/Automotive Engine Valves.jpg",
   },
   {
     title: "Inlet Valves",
     app: "Intake airflow and combustion efficiency",
     desc: "Specialized aerodynamic head profiles that manage air-to-fuel ratios effectively, reducing carbon build-up and lowering manifold temps.",
     features: ["High flow coefficient profiles", "Anti-wear treatments", "Lightweight alloy options"],
+    image: "/images/Products/Inlet Valves.jpg",
   },
   {
     title: "Exhaust Valves",
     app: "High heat exhaust durability",
     desc: "Engineered from advanced alloys to survive punishing exhaust gases and severe exhaust port velocity, eliminating risks of premature valve burn.",
     features: ["Austenitic steel base", "Sodium-filled variants", "Corrosion resistant coatings"],
+    image: "/images/Products/Exhaust Valves.jpg",
   },
   {
     title: "Custom Valve Solutions",
     app: "Application-specific performance needs",
     desc: "Bespoke short-run and prototype valve development built exactly to OEM blueprints or aftermarket performance upgrade specs.",
     features: ["Custom prototyping", "Specialty alloy sourcing", "Performance modification"],
+    image: "/images/Products/Custom Valve Solutions.jpg",
   },
 ];
 
@@ -66,15 +71,16 @@ export default function ProductsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2">
             
-            {products.map((product, idx) => (
+            {products.map((product) => (
               <article key={product.title} className="flex flex-col bg-white border border-slate-200 rounded-lg overflow-hidden transition-all hover:border-slate-400">
-                <div className="h-64 bg-slate-200 border-b border-slate-200 flex flex-col items-center justify-center p-6 text-center">
-                  <div className="bg-white p-4 rounded shadow-sm border border-slate-300 flex flex-col items-center gap-3">
-                    <Settings2 className="h-8 w-8 text-slate-500" />
-                    <p className="text-xs uppercase tracking-widest font-bold text-slate-600">
-                      [ Product Image Placeholder ]
-                    </p>
-                  </div>
+                <div className="h-64 bg-white border-b border-slate-200 flex flex-col items-center justify-center overflow-hidden relative p-4">
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-contain"
+                  />
                 </div>
                 
                 <div className="flex flex-col flex-1 p-8">

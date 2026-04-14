@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, Globe2, Package, Ship, Truck } from "lucide-react";
 
@@ -105,13 +106,19 @@ export default function ExportPage() {
                 key={product.title}
                 className="grid overflow-hidden rounded-lg border border-slate-200 bg-white lg:grid-cols-[1fr_1.1fr]"
               >
-                <div className="flex min-h-[220px] items-center justify-center border-b border-slate-200 bg-slate-200 p-6 lg:min-h-full lg:border-r lg:border-b-0">
-                  <div className="flex flex-col items-center text-center">
-                    <Package className="h-9 w-9 text-slate-500" />
-                    <p className="mt-3 text-xs font-bold uppercase tracking-widest text-slate-500">
-                      Product Image Slot {String(idx + 1).padStart(2, "0")}
-                    </p>
-                  </div>
+                <div className="flex min-h-[220px] items-center justify-center border-b border-slate-200 bg-slate-200 p-6 lg:min-h-full lg:border-r lg:border-b-0 relative overflow-hidden">
+                  {idx === 0 && (
+                    <Image src="/ENGINE VALVE GUIDE.jpg" alt={product.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                  )}
+                  {idx === 1 && (
+                    <Image src="/Cylinder Sleeve.jpg" alt={product.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                  )}
+                  {idx > 1 && (
+                    <div className="flex flex-col items-center text-center">
+                      <Package className="h-9 w-9 text-slate-500" />
+                      <p className="mt-3 text-xs font-bold uppercase tracking-widest text-slate-500">Coming Soon</p>
+                    </div>
+                  )}
                 </div>
                 <div className="p-8">
                   <h3 className="text-3xl font-black tracking-tight text-slate-900">{product.title}</h3>
