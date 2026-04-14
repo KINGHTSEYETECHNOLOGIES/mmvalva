@@ -185,10 +185,13 @@ export default function HomePage() {
             </div>
             
             {/* Facility Image Placeholder */}
-            <div className="hidden lg:flex flex-1 bg-slate-800 items-center justify-center min-h-[400px]">
-               <p className="text-slate-500 font-bold uppercase tracking-widest text-sm">
-                [ Facility / Quality Lab Photo ]
-              </p>
+            <div className="hidden lg:flex flex-1 bg-slate-800 items-center justify-center min-h-[400px] relative">
+              <Image
+                src="/images/home/home-quality-lab.jpg"
+                alt="Quality lab and manufacturing facility"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
