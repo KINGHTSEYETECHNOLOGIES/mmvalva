@@ -84,7 +84,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold uppercase tracking-widest text-sm text-slate-400 mb-2">Headquarters</h3>
                     <p className="text-lg leading-relaxed text-slate-200">
-                      123 Industrial Estate Road<br/>Sector 10, New Delhi 110001<br/>India
+                      2 Vaidyaraj Gondia Road<br/>Rajkot - 360 002<br/>Gujarat, India
                     </p>
                   </div>
                 </li>
@@ -95,8 +95,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold uppercase tracking-widest text-sm text-slate-400 mb-2">Sales & Export Inquiries</h3>
-                    <a href="mailto:contact@placeholder.com" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors">
-                      contact@placeholder.com
+                    <a href="mailto:mmvalesrajkot@gmail.com" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors">
+                      mmvalesrajkot@gmail.com
                     </a>
                   </div>
                 </li>
@@ -106,12 +106,9 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold uppercase tracking-widest text-sm text-slate-400 mb-2">Direct Lines</h3>
-                    <a href="tel:+910000000000" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors block">
-                      +91 00 0000 0000
-                    </a>
-                    <a href="tel:+911111111111" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors block mt-2">
-                      +91 11 1111 1111
+                    <h3 className="font-bold uppercase tracking-widest text-sm text-slate-400 mb-2">Direct Line</h3>
+                    <a href="tel:+919829546918" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors block">
+                      +91 9829546918
                     </a>
                   </div>
                 </li>

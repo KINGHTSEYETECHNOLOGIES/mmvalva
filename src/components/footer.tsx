@@ -13,7 +13,7 @@ export default function Footer() {
             </span>
           </Link>
           <p className="mt-6 text-sm leading-7 text-slate-400">
-            Precision engine valves for diesel, automotive, OEM, and aftermarket applications, built with a stronger focus on process and presentation.
+            Manufacturer of all types of valves for diesel, automotive, OEM, and aftermarket applications, built with a stronger focus on process and presentation.
           </p>
         </div>
 
@@ -66,6 +66,11 @@ export default function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/export" className="transition-colors hover:text-white">
+                Export
+              </Link>
+            </li>
+            <li>
               <Link
                 href="/inlet-exhaust-valves"
                 className="transition-colors hover:text-white"
@@ -86,24 +91,24 @@ export default function Footer() {
           <ul className="space-y-4 text-sm text-slate-400">
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-red-500" />
-              <span>123 Industrial Estate, New Delhi, 110001, India</span>
+              <span>2 Vaidyaraj Gondia Road, Rajkot - 360 002, Gujarat, India</span>
             </li>
             <li className="flex items-center gap-3">
               <Mail className="h-5 w-5 shrink-0 text-red-500" />
               <a
-                href="mailto:contact@placeholder.com"
+                href="mailto:mmvalesrajkot@gmail.com"
                 className="transition-colors hover:text-white font-medium"
               >
-                contact@placeholder.com
+                mmvalesrajkot@gmail.com
               </a>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="h-5 w-5 shrink-0 text-red-500" />
               <a
-                href="tel:+910000000000"
+                href="tel:+919829546918"
                 className="transition-colors hover:text-white font-medium"
               >
-                +91 00 0000 0000
+                +91 9829546918
               </a>
             </li>
           </ul>

@@ -17,7 +17,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "M.M. Valves | Precision Engine Valves",
+  title: "M.M. Valves | Manufacturer of All types of Valves",
   description:
     "OEM-grade diesel and automotive engine valves built with controlled manufacturing, technical quality, and reliable supply.",
 };

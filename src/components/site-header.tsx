@@ -28,7 +28,7 @@ export default function SiteHeader() {
           </span>
           <span className="flex flex-col leading-none">
             <span className="text-lg font-black uppercase tracking-widest text-white transition-colors group-hover:text-slate-300">M.M. Valves</span>
-            <span className="mt-1 flex text-[0.67rem] font-bold uppercase tracking-widest text-slate-400">Precision engine valves</span>
+            <span className="mt-1 flex text-[0.67rem] font-bold uppercase tracking-widest text-slate-400">Manufacturer of All types of Valves</span>
           </span>
         </Link>
         <nav className="hidden items-center justify-center gap-7 text-sm font-bold uppercase tracking-wider text-slate-300 lg:flex">
@@ -46,6 +46,12 @@ export default function SiteHeader() {
             className="transition-colors hover:text-white hover:text-red-400"
           >
             Products
+          </Link>
+          <Link
+            href="/export"
+            className="transition-colors hover:text-white hover:text-red-400"
+          >
+            Export
           </Link>
           <Link
             href="/manufacturing"

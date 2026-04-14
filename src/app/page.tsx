@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   BadgeCheck,
@@ -87,12 +88,14 @@ export default function HomePage() {
           </div>
           
           <div className="flex-1 w-full relative">
-            {/* Image Placeholder */}
-            <div className="aspect-video lg:aspect-[4/3] bg-slate-200 rounded-lg border-4 border-slate-300 overflow-hidden flex flex-col items-center justify-center text-center p-6 shadow-lg">
-              <Factory className="w-16 h-16 text-slate-400 mb-4" />
-              <p className="text-slate-500 font-bold uppercase tracking-widest text-sm max-w-xs">
-                [ Place high-quality factory or product image here ]
-              </p>
+            <div className="aspect-video lg:aspect-[4/3] rounded-lg border-4 border-slate-300 overflow-hidden shadow-lg bg-slate-200 relative">
+              <Image
+                src="/images/home/home-hero-factory.jpg"
+                alt="Factory manufacturing setup"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </div>
