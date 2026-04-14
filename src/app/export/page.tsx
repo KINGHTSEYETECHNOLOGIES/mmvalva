@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BadgeCheck, Globe2, Package, Ship, Truck } from "lucide-react";
+import { ArrowRight, BadgeCheck, Globe2, Ship, Truck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Export | M.M. Valves",
@@ -13,26 +13,32 @@ const exportProducts = [
   {
     title: "Engine Valves",
     copy: "Engine valves control intake airflow and exhaust gas release. High-quality valves support smoother breathing, stable performance, and long service life.",
+    image: "/images/export/Engine Valves.jpg",
   },
   {
     title: "Valve Guides",
     copy: "Valve guides keep valves aligned for smooth up-down movement, lower wear, reduced leakage risk, and consistent operation efficiency.",
+    image: "/images/export/Valve Guides.jpg",
   },
   {
     title: "Connecting Rods",
     copy: "Connecting rods transfer piston force to the crankshaft and convert linear motion into rotation for dependable power transmission.",
+    image: "/images/export/Connecting Rods.jpg",
   },
   {
     title: "Rocker Arms",
     copy: "Rocker arms control valve opening and closing through camshaft motion transfer, helping maintain combustion and timing stability.",
+    image: "/images/export/Rocker Arms.webp",
   },
   {
     title: "Cylinder Sleeves",
     copy: "Cylinder sleeves provide a durable low-friction surface for piston movement, helping protect blocks and improve heat dissipation.",
+    image: "/images/export/Cylinder Sleeves.jpg",
   },
   {
     title: "Air Cool Block",
     copy: "Air-cooled engine blocks use fin-driven airflow to regulate temperature and deliver reliable operation in compact engine platforms.",
+    image: "/images/export/Air Cool Block.webp",
   },
 ];
 
@@ -101,24 +107,19 @@ export default function ExportPage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2">
-            {exportProducts.map((product, idx) => (
+            {exportProducts.map((product) => (
               <article
                 key={product.title}
                 className="grid overflow-hidden rounded-lg border border-slate-200 bg-white lg:grid-cols-[1fr_1.1fr]"
               >
                 <div className="flex min-h-[220px] items-center justify-center border-b border-slate-200 bg-slate-200 p-6 lg:min-h-full lg:border-r lg:border-b-0 relative overflow-hidden">
-                  {idx === 0 && (
-                    <Image src="/ENGINE VALVE GUIDE.jpg" alt={product.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
-                  )}
-                  {idx === 1 && (
-                    <Image src="/Cylinder Sleeve.jpg" alt={product.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
-                  )}
-                  {idx > 1 && (
-                    <div className="flex flex-col items-center text-center">
-                      <Package className="h-9 w-9 text-slate-500" />
-                      <p className="mt-3 text-xs font-bold uppercase tracking-widest text-slate-500">Coming Soon</p>
-                    </div>
-                  )}
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-contain p-4"
+                  />
                 </div>
                 <div className="p-8">
                   <h3 className="text-3xl font-black tracking-tight text-slate-900">{product.title}</h3>
