@@ -84,7 +84,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold uppercase tracking-widest text-sm text-slate-400 mb-2">Headquarters</h3>
                     <p className="text-lg leading-relaxed text-slate-200">
-                      2 Vaidyaraj Gondia Road<br/>Rajkot - 360 002<br/>Gujarat, India
+                      2 Vaidyavadi, Gondal Road<br/>Rajkot - 360 002<br/>Gujarat, India
                     </p>
                   </div>
                 </li>
@@ -107,8 +107,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold uppercase tracking-widest text-sm text-slate-400 mb-2">Direct Line</h3>
-                    <a href="tel:+919829546918" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors block">
-                      +91 9829546918
+                    <a href="tel:+919825079256" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors block">
+                      +91 9825079256
                     </a>
                   </div>
                 </li>

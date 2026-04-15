@@ -43,7 +43,7 @@ const products = [
     app: "Application-specific performance needs",
     desc: "Bespoke short-run and prototype valve development built exactly to OEM blueprints or aftermarket performance upgrade specs.",
     features: ["Custom prototyping", "Specialty alloy sourcing", "Performance modification"],
-    image: "/images/Products/Custom Valve Solutions.jpg",
+    image: "/images/Products/Custom Valve Solutions.webp",
   },
 ];
 
@@ -71,13 +71,16 @@ export default function ProductsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2">
             
-            {products.map((product) => (
+            {products.map((product, index) => (
               <article key={product.title} className="flex flex-col bg-white border border-slate-200 rounded-lg overflow-hidden transition-all hover:border-slate-400">
                 <div className="h-64 bg-white border-b border-slate-200 flex flex-col items-center justify-center overflow-hidden relative p-4">
                   <Image
                     src={product.image}
                     alt={product.title}
                     fill
+                    unoptimized
+                    loading={index === 0 ? "eager" : "lazy"}
+                    priority={index === 0}
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-contain"
                   />

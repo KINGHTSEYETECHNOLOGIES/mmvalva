@@ -23,12 +23,12 @@ const exportProducts = [
   {
     title: "Connecting Rods",
     copy: "Connecting rods transfer piston force to the crankshaft and convert linear motion into rotation for dependable power transmission.",
-    image: "/images/export/Connecting Rods.jpg",
+    image: "/images/export/AJ1 connecting Rod.jpg",
   },
   {
     title: "Rocker Arms",
     copy: "Rocker arms control valve opening and closing through camshaft motion transfer, helping maintain combustion and timing stability.",
-    image: "/images/export/Rocker Arms.webp",
+    image: "/images/export/AJ1 Rocker Arm.jpg",
   },
   {
     title: "Cylinder Sleeves",
@@ -107,7 +107,7 @@ export default function ExportPage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2">
-            {exportProducts.map((product) => (
+            {exportProducts.map((product, index) => (
               <article
                 key={product.title}
                 className="grid overflow-hidden rounded-lg border border-slate-200 bg-white lg:grid-cols-[1fr_1.1fr]"
@@ -117,6 +117,8 @@ export default function ExportPage() {
                     src={product.image}
                     alt={product.title}
                     fill
+                    loading={index === 0 ? "eager" : "lazy"}
+                    priority={index === 0}
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-contain p-4"
                   />

@@ -45,22 +45,22 @@ const productFamilies = [
   {
     title: "Diesel Engine Valves",
     copy: "Heavy-duty valves built for maximum load and heat resistance in commercial applications.",
-    image: "/ENGINE VALVE GUIDE.jpg",
+    image: "/images/home/Diesel Engine Valves.jpg",
   },
   {
     title: "Automotive Engine Valves",
     copy: "Precision valves precision-engineered for passenger vehicles and light trucks.",
-    image: "/Automotive Engine Valve.jpg",
+    image: "/images/home/Automotive Engine Valves.jpg",
   },
   {
     title: "Industrial Valves",
     copy: "Robust designs for stationary engines, generators, and heavy machinery.",
-    image: "/Cylinder Sleeve.jpg",
+    image: "/images/home/Industrial valve.jpg",
   },
   {
     title: "Custom Solutions",
     copy: "Manufactured exactly to your blueprints, materials, and specialized requirements.",
-    image: "/engine-valves inlet amd Ex.jpg",
+    image: "/images/home/Custom Solutions.webp",
   },
 ];
 

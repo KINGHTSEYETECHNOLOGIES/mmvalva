@@ -9,20 +9,20 @@ export default function Footer() {
       <div className="container mx-auto relative z-10 grid grid-cols-1 gap-10 px-4 sm:px-6 md:grid-cols-4 md:gap-8">
         <div className="md:col-span-1">
           <Link href="/" className="inline-flex items-center gap-3 group">
-            <span className="flex h-11 w-11 items-center justify-center overflow-hidden rounded bg-white transition-colors group-hover:bg-slate-100">
+            <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded bg-white transition-colors group-hover:bg-slate-100">
               <Image
                 src="/images/logo/MM%20VALAVE%20SYMBOLE.png"
                 alt="M.M. Valves symbol"
-                width={44}
-                height={44}
-                className="h-auto w-11 object-contain"
+                width={48}
+                height={48}
+                className="h-auto w-12 object-contain"
               />
             </span>
             <Image
               src="/images/logo/MM%20VALAVE%20LOGO.png"
               alt="M.M. Valves"
-              width={170}
-              height={46}
+              width={210}
+              height={54}
               className="h-9 w-auto object-contain brightness-0 invert"
             />
           </Link>
@@ -93,7 +93,7 @@ export default function Footer() {
           <ul className="space-y-4 text-sm text-slate-400">
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-red-500" />
-              <span>2 Vaidyaraj Gondia Road, Rajkot - 360 002, Gujarat, India</span>
+              <span>2 Vaidyavadi, Gondal Road, Rajkot - 360 002, Gujarat, India</span>
             </li>
             <li className="flex items-center gap-3">
               <Mail className="h-5 w-5 shrink-0 text-red-500" />
@@ -103,8 +103,8 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <Phone className="h-5 w-5 shrink-0 text-red-500" />
-              <a href="tel:+919829546918" className="transition-colors hover:text-white font-medium">
-                +91 9829546918
+              <a href="tel:+919825079256" className="transition-colors hover:text-white font-medium">
+                +91 9825079256
               </a>
             </li>
           </ul>
