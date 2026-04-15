@@ -24,26 +24,21 @@ export default function SiteHeader() {
     >
       <div className="container mx-auto grid grid-cols-[auto_1fr_auto] items-center gap-6 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="group relative z-10 flex items-center gap-3 text-white justify-self-start">
-          <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded bg-white transition-colors group-hover:bg-slate-100">
+          <span className="flex h-[52px] w-[52px] flex-shrink-0 items-center justify-center overflow-hidden rounded bg-white transition-colors group-hover:bg-slate-100">
             <Image
               src="/images/logo/MM%20VALAVE%20SYMBOLE.png"
               alt="M.M. Valves symbol"
-              width={48}
-              height={48}
-              className="h-auto w-12 object-contain"
+              width={52}
+              height={52}
+              className="h-auto w-[52px] object-contain"
               priority
             />
           </span>
           <span className="flex flex-col leading-none">
-            <Image
-              src="/images/logo/MM%20VALAVE%20LOGO.png"
-              alt="M.M. Valves"
-              width={220}
-              height={56}
-              className="h-9 w-auto object-contain brightness-0 invert sm:h-10"
-              priority
-            />
-            <span className="mt-1 text-[0.62rem] font-bold uppercase tracking-widest text-slate-400">
+            <span className="text-3xl font-black uppercase tracking-wide text-white transition-colors group-hover:text-slate-100 sm:text-[2.7rem]">
+              M.M. VALVES
+            </span>
+            <span className="mt-1 text-[0.58rem] font-bold uppercase tracking-[0.22em] text-slate-400">
               Manufacturer of All types of Valves
             </span>
           </span>

@@ -9,22 +9,18 @@ export default function Footer() {
       <div className="container mx-auto relative z-10 grid grid-cols-1 gap-10 px-4 sm:px-6 md:grid-cols-4 md:gap-8">
         <div className="md:col-span-1">
           <Link href="/" className="inline-flex items-center gap-3 group">
-            <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded bg-white transition-colors group-hover:bg-slate-100">
+            <span className="flex h-[48px] w-[48px] items-center justify-center overflow-hidden rounded bg-white transition-colors group-hover:bg-slate-100">
               <Image
                 src="/images/logo/MM%20VALAVE%20SYMBOLE.png"
                 alt="M.M. Valves symbol"
                 width={48}
                 height={48}
-                className="h-auto w-12 object-contain"
+                className="h-auto w-[48px] object-contain"
               />
             </span>
-            <Image
-              src="/images/logo/MM%20VALAVE%20LOGO.png"
-              alt="M.M. Valves"
-              width={210}
-              height={54}
-              className="h-9 w-auto object-contain brightness-0 invert"
-            />
+            <span className="text-[1.65rem] font-black uppercase tracking-wide text-white transition-colors group-hover:text-slate-100">
+              M.M. VALVES
+            </span>
           </Link>
           <p className="mt-6 text-sm leading-7 text-slate-400">
             Manufacturer of all types of valves for diesel, automotive, OEM, and aftermarket applications, built with a stronger focus on process and presentation.
