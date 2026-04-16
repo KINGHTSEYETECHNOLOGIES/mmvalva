@@ -95,8 +95,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold uppercase tracking-widest text-sm text-slate-400 mb-2">Sales & Export Inquiries</h3>
-                    <a href="mailto:mmvalesrajkot@gmail.com" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors">
-                      mmvalesrajkot@gmail.com
+                    <a href="mailto:mmvalvesrajkot@gmail.com" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors">
+                      mmvalvesrajkot@gmail.com
                     </a>
                   </div>
                 </li>
@@ -107,8 +107,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold uppercase tracking-widest text-sm text-slate-400 mb-2">Direct Line</h3>
-                    <a href="tel:+919825079256" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors block">
-                      +91 9825079256
+                    <a href="tel:+919429546918" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors block">
+                      +91 9429546918
                     </a>
                   </div>
                 </li>

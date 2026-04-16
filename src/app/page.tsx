@@ -94,11 +94,11 @@ export default function HomePage() {
           <div className="flex-1 w-full relative">
             <div className="aspect-video lg:aspect-[4/3] rounded-lg border-4 border-slate-300 overflow-hidden shadow-lg bg-slate-200 relative">
               <Image
-                src="/home-hero-factory.jpg"
-                alt="Factory manufacturing setup"
+                src="/images/home/Home page image.webp"
+                alt="Engine valves showcase"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-contain bg-white p-4"
                 priority
               />
             </div>

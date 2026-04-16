@@ -21,14 +21,14 @@ const stages = [
     icon: Hammer,
   },
   {
-    title: "CNC & Turning",
-    desc: "Heavy roughing and profiling on high-rigidity CNC lathes ensure perfect initial head contouring and stem parallelism.",
-    icon: CircleDashed,
-  },
-  {
     title: "Heat Treatment",
     desc: "Induction hardening of the seat and stem tip delivers precise Rockwell hardness (HRC) to endure extreme friction cycles.",
     icon: Flame,
+  },
+  {
+    title: "CNC & Turning",
+    desc: "Heavy roughing and profiling on high-rigidity CNC lathes ensure perfect initial head contouring and stem parallelism.",
+    icon: CircleDashed,
   },
   {
     title: "Centerless Grinding",
