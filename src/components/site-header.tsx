@@ -18,32 +18,32 @@ export default function SiteHeader() {
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-slate-900 border-b border-slate-800 shadow-md py-4"
-          : "bg-slate-900 border-b border-transparent py-5"
+          ? "bg-slate-900/98 border-b border-slate-800 shadow-lg py-3"
+          : "bg-slate-900 border-b border-transparent py-4"
       }`}
     >
-      <div className="container mx-auto grid grid-cols-[auto_1fr_auto] items-center gap-6 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto grid grid-cols-[auto_1fr_auto] items-center gap-5 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="group relative z-10 flex items-center gap-3 text-white justify-self-start">
-          <span className="flex h-[52px] w-[52px] flex-shrink-0 items-center justify-center overflow-hidden rounded bg-white transition-colors group-hover:bg-slate-100">
+          <span className="flex h-[50px] w-[50px] flex-shrink-0 items-center justify-center overflow-hidden rounded-md bg-white transition-colors group-hover:bg-slate-100">
             <Image
               src="/images/logo/MM%20VALAVE%20SYMBOLE.png"
               alt="M.M. Valves symbol"
-              width={52}
-              height={52}
-              className="h-auto w-[52px] object-contain"
+              width={50}
+              height={50}
+              className="h-auto w-[50px] object-contain"
               priority
             />
           </span>
           <span className="flex flex-col leading-none">
-            <span className="text-3xl font-black uppercase tracking-wide text-white transition-colors group-hover:text-slate-100 sm:text-[2.7rem]">
+            <span className="text-[2.15rem] font-black uppercase tracking-wide text-white transition-colors group-hover:text-slate-100 sm:text-[2.35rem]">
               M.M. VALVES
             </span>
-            <span className="mt-1 text-[0.58rem] font-bold uppercase tracking-[0.22em] text-slate-400">
+            <span className="mt-1 text-[0.55rem] font-bold uppercase tracking-[0.2em] text-slate-400">
               Manufacturer of All types of Valves
             </span>
           </span>
         </Link>
-        <nav className="hidden items-center justify-center gap-7 text-sm font-bold uppercase tracking-wider text-slate-300 lg:flex">
+        <nav className="hidden items-center justify-center gap-6 text-[0.78rem] font-bold uppercase tracking-wider text-slate-300 lg:flex">
           <Link href="/" className="transition-colors hover:text-white hover:text-red-400">
             Home
           </Link>
@@ -64,7 +64,7 @@ export default function SiteHeader() {
           </Link>
         </nav>
         <div className="flex items-center gap-3 justify-self-end">
-          <Link href="/contact" className="bg-red-700 hover:bg-red-800 text-white font-bold uppercase tracking-wider rounded transition-colors text-xs py-3 px-5 hidden sm:inline-flex items-center gap-2">
+          <Link href="/contact" className="bg-red-700 hover:bg-red-800 text-white font-bold uppercase tracking-wider rounded-md transition-colors text-[0.7rem] py-3 px-5 hidden sm:inline-flex items-center gap-2">
             Request Quote
             <ArrowRight className="h-4 w-4" />
           </Link>

@@ -1,137 +1,137 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowRight, Truck, PackageSearch } from "lucide-react";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Products | M.M. Valves",
   description:
-    "Explore diesel, automotive, inlet, exhaust, and custom engine valve solutions from M.M. Valves.",
+    "Precision engine valve product portfolio for OEM applications, quality inspection, and manufacturing capabilities.",
 };
 
-const products = [
+const productSections = [
   {
-    title: "Diesel Engine Valves",
-    app: "Heavy-duty commercial & industrial diesel applications",
-    desc: "Built to withstand the enormous thermal loads and extended service cycles demanded by mass-moving transport, agricultural machinery, and heavy industrial machinery.",
-    features: ["Bimetallic friction welding", "Stellite armored seats", "Chrome-plated stems"],
-    image: "/images/Products/Diesel Engine Valves.jpg",
+    title: "Engine Valve Manufacturing Range",
+    copy: "At M.M. Valves, we manufacture high-precision engine valves designed to meet the performance, durability, and consistency requirements of OEM engines. Our valves are engineered for reliable operation under high temperature, pressure, and continuous duty conditions.",
+    bullets: [
+      "2-Wheeler Engines",
+      "3-Wheeler Engines",
+      "4-Wheeler Engines",
+      "Commercial Vehicles",
+      "Tractors",
+      "Diesel Engines",
+    ],
+    footer:
+      "Our product range supports both intake and exhaust valve applications, manufactured as per customer drawings and technical specifications.",
+    image: "/images/Products/product-pg-1-768x516.avif",
   },
   {
-    title: "Automotive Engine Valves",
-    app: "Passenger & light commercial vehicles",
-    desc: "High-volume, production-ready solutions optimized for fuel efficiency, low-noise sealing, and high-RPM thermal stability required by modern passenger cabins.",
-    features: ["Nitrided finish options", "Induction hardened stems", "Precision concentricity"],
-    image: "/images/Products/Automotive Engine Valves.jpg",
+    title: "Key Product Features",
+    copy: "Our engine valves are manufactured with a strong focus on precision, consistency, and long service life:",
+    bullets: [
+      "High Durability - Designed to withstand high combustion temperatures and repeated operating cycles",
+      "Precision Machining - Manufactured using CNC machining processes to ensure dimensional accuracy and repeatability",
+      "Advanced Heat Treatment - Controlled heat treatment processes for improved strength, wear resistance, and thermal stability",
+      "Strict Quality Control - In-process and final inspection to maintain consistent quality across production batches",
+      "OEM-Approved Material Grades - Raw materials selected as per OEM requirements for intake and exhaust valve applications",
+    ],
+    image: "/images/Products/product-pg-2-768x516.avif",
   },
   {
-    title: "Inlet Valves",
-    app: "Intake airflow and combustion efficiency",
-    desc: "Specialized aerodynamic head profiles that manage air-to-fuel ratios effectively, reducing carbon build-up and lowering manifold temps.",
-    features: ["High flow coefficient profiles", "Anti-wear treatments", "Lightweight alloy options"],
-    image: "/images/Products/Inlet Valves.jpg",
+    title: "Quality Inspection & Measurement Capability",
+    copy: "To ensure consistent OEM-level quality, M.M. Valves maintains in-house inspection and measurement systems:",
+    bullets: [
+      "Hardness Testing to verify heat treatment effectiveness",
+      "Machine-Mounted Gauges on all production machines for in-process dimensional checks",
+      "Profile Measuring Machine for accurate profile, angle, and dimensional verification",
+      "Regular Inspection by Qualified Engineer to monitor quality and implement corrective action when required",
+    ],
+    footer:
+      "These systems help us maintain high accuracy, process stability, and repeatable quality across production batches.",
+    image: "/images/Products/WhatsApp-Image-2026-01-01-at-11.44.32-768x1024.jpg",
   },
   {
-    title: "Exhaust Valves",
-    app: "High heat exhaust durability",
-    desc: "Engineered from advanced alloys to survive punishing exhaust gases and severe exhaust port velocity, eliminating risks of premature valve burn.",
-    features: ["Austenitic steel base", "Sodium-filled variants", "Corrosion resistant coatings"],
-    image: "/images/Products/Exhaust Valves.jpg",
+    title: "OEM Supply Capability",
+    copy: "We are a trusted engine valve supplier to OEM customers, supporting them with:",
+    bullets: [
+      "Consistent product quality",
+      "Stable batch-to-batch performance",
+      "Reliable supply for regular production schedules",
+    ],
+    footer:
+      "Our manufacturing systems are aligned with OEM quality expectations and long-term supply partnerships.",
+    image: "/images/Products/product-pg-4-768x432.avif",
   },
   {
-    title: "Custom Valve Solutions",
-    app: "Application-specific performance needs",
-    desc: "Bespoke short-run and prototype valve development built exactly to OEM blueprints or aftermarket performance upgrade specs.",
-    features: ["Custom prototyping", "Specialty alloy sourcing", "Performance modification"],
-    image: "/images/Products/Custom Valve Solutions.webp",
+    title: "Why OEMs Choose M.M. Valves",
+    copy: "OEM customers partner with us for our manufacturing reliability and process control:",
+    bullets: [
+      "CNC-Based Manufacturing Technology - Ensures accuracy, uniformity, and scalability for volume production",
+      "Consistent Quality Assurance - Quality checks at every critical stage of manufacturing",
+      "Cost-Effective Volume Manufacturing - Optimized processes that support competitive pricing without compromising quality",
+      "On-Time Delivery Performance - Strong production planning and commitment to delivery schedules",
+    ],
+    image: "/images/Products/image_2-768x576.jpg",
+  },
+  {
+    title: "Manufacturing Partner",
+    copy: "With over a decade of manufacturing experience, M.M. Valves is committed to delivering precision-engineered engine valves that meet OEM standards for performance, reliability, and cost efficiency.",
+    footer:
+      "We welcome opportunities to collaborate with OEMs, Tier-1 suppliers, and engine manufacturers for long-term partnerships.",
+    image: "/images/Products/product-pg-6-768x432.avif",
   },
 ];
 
 export default function ProductsPage() {
   return (
-    <main className="flex flex-col min-h-screen bg-white">
-      {/* PAGE HEADER */}
-      <section className="bg-slate-900 pt-24 pb-16 border-b-4 border-red-700">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
-          <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded bg-slate-800 text-slate-300 text-xs font-bold uppercase tracking-wider mb-6">
-            <PackageSearch className="w-4 h-4" />
-            <span>Our Product Range</span>
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight mb-6">
-            Precision Components Tailored by Application
-          </h1>
-          <p className="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-3xl mx-auto">
-            Our engineering portfolio spans the full spectrum of internal combustion demands, offering robust material combinations and advanced coatings to solve specific thermal, dimensional, and environmental challenges.
-          </p>
-        </div>
-      </section>
+    <main className="flex min-h-screen flex-col bg-gradient-to-b from-slate-100 to-slate-50">
+      <section className="py-12 sm:py-14 lg:py-16">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <header className="mb-10 rounded-2xl border border-slate-200 bg-white px-6 py-7 shadow-sm sm:mb-12 sm:px-8 sm:py-8">
+            <h1 className="text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
+              Precision Engine Valves for OEM Applications
+            </h1>
+            <div className="mt-3 h-1.5 w-24 rounded-full bg-red-700" />
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
+              Engine components engineered for reliability, repeatability, and OEM-grade consistency.
+            </p>
+          </header>
 
-      {/* PRODUCTS GRID */}
-      <section className="py-20 lg:py-28 bg-slate-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-2">
-            
-            {products.map((product, index) => (
-              <article key={product.title} className="flex flex-col bg-white border border-slate-200 rounded-lg overflow-hidden transition-all hover:border-slate-400">
-                <div className="h-64 bg-white border-b border-slate-200 flex flex-col items-center justify-center overflow-hidden relative p-4">
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    fill
-                    unoptimized
-                    loading={index === 0 ? "eager" : "lazy"}
-                    priority={index === 0}
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-contain"
-                  />
+          <div className="space-y-7 sm:space-y-8">
+            {productSections.map((section, index) => (
+              <article
+                key={section.title}
+                className="grid items-center gap-6 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6 lg:grid-cols-2 lg:gap-10 lg:p-8"
+              >
+                <div className={index % 2 === 0 ? "order-1" : "order-1 lg:order-2"}>
+                  <div className="relative h-72 overflow-hidden rounded-xl border border-slate-200 bg-slate-50 sm:h-80 lg:h-[340px]">
+                    <Image
+                      src={section.image}
+                      alt={section.title}
+                      fill
+                      loading={index === 0 ? "eager" : "lazy"}
+                      priority={index === 0}
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
-                
-                <div className="flex flex-col flex-1 p-8">
-                  <p className="text-xs font-bold uppercase tracking-widest text-red-700 mb-3">{product.app}</p>
-                  <h2 className="text-2xl font-black uppercase text-slate-900 leading-tight mb-4">{product.title}</h2>
-                  <p className="text-base text-slate-600 leading-relaxed mb-8 flex-1">{product.desc}</p>
-                  
-                  <div className="pt-6 border-t border-slate-200">
-                    <p className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-4">Technical Specifications</p>
-                    <ul className="space-y-3">
-                      {product.features.map(f => (
-                        <li key={f} className="flex items-center gap-3 text-sm font-bold text-slate-700">
-                          <span className="h-2 w-2 bg-red-700"></span>
-                          {f}
-                        </li>
+
+                <div className={index % 2 === 0 ? "order-2" : "order-2 lg:order-1"}>
+                  <p className="mb-3 text-xs font-bold uppercase tracking-widest text-red-700">Section {String(index + 1).padStart(2, "0")}</p>
+                  <h2 className="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">{section.title}</h2>
+                  <p className="mt-4 max-w-prose text-base leading-relaxed text-slate-700 sm:text-lg">{section.copy}</p>
+                  {section.bullets && (
+                    <ul className="mt-4 list-disc space-y-1.5 pl-6 text-base leading-relaxed text-slate-700 marker:text-red-700 sm:text-lg">
+                      {section.bullets.map((item) => (
+                        <li key={item}>{item}</li>
                       ))}
                     </ul>
-                  </div>
-                  
-                  <div className="mt-8 flex">
-                    <Link href="/contact" className="w-full inline-flex justify-center items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold uppercase tracking-wider px-6 py-4 rounded transition-colors">
-                      Request Spec Sheet
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </div>
+                  )}
+                  {section.footer && (
+                    <p className="mt-4 max-w-prose text-base leading-relaxed text-slate-700 sm:text-lg">{section.footer}</p>
+                  )}
                 </div>
               </article>
             ))}
-            
-            {/* OEM Callout Box */}
-            <article className="flex flex-col justify-center bg-red-700 border border-red-800 rounded-lg p-8 lg:p-12 text-white">
-              <div className="mb-8 inline-flex h-16 w-16 items-center justify-center bg-white text-red-700 rounded">
-                <Truck className="h-8 w-8" />
-              </div>
-              <h2 className="text-3xl lg:text-4xl font-black uppercase leading-tight mb-6">
-                Enterprise Bulk & Export Orders
-              </h2>
-              <p className="text-lg leading-relaxed text-red-100 mb-10 max-w-md">
-                We manage structured manufacturing planning and logistics for recurring international delivery programs and OEM assembly lines.
-              </p>
-              <div>
-                <Link href="/contact" className="inline-flex justify-center items-center gap-2 bg-white hover:bg-slate-100 text-red-700 font-bold uppercase tracking-wider px-8 py-4 rounded transition-colors group">
-                  Consult Commercial Team
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
-            </article>
-
           </div>
         </div>
       </section>

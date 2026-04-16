@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Hammer, CircleDashed, Drill, Factory, ShieldCheck, Flame, Droplets, Star } from "lucide-react";
 import Link from "next/link";
 
@@ -70,15 +69,17 @@ export default function ManufacturingPage() {
       <section className="py-20 lg:py-28 bg-slate-50 border-b border-slate-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <div className="mb-14 h-[460px] rounded-xl overflow-hidden border-4 border-slate-200 shadow-xl relative bg-white p-2">
-            <Image
-              src="/ALL PRODUCTS .jpg"
-              alt="All products showcase"
-              fill
-              loading="eager"
-              priority
-              sizes="(max-width: 1024px) 100vw, 90vw"
-              className="object-contain"
-            />
+            <video
+              className="h-full w-full rounded-lg object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster="/ALL PRODUCTS .jpg"
+            >
+              <source src="/Robotics%20For%20Fully%20Automation%20.mp4" type="video/mp4" />
+            </video>
           </div>
           <div className="space-y-6">
             {stages.map((stage, i) => {

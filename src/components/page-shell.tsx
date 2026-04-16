@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import Image from "next/image";
-import SiteHeader from "./site-header";
 import { Wrench } from "lucide-react";
 
 type PageShellProps = {
@@ -29,11 +28,10 @@ export function PageShell({
         : "Brand visual placeholder";
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
-      <SiteHeader />
+    <div className="flex min-h-screen flex-col bg-white">
       <main className="flex-1">
         {/* PAGE HEADER */}
-        <section className="bg-slate-900 pt-32 pb-20 border-b-4 border-red-700">
+        <section className="border-b-4 border-red-700 bg-slate-900 pt-24 pb-18">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
             <div className="grid gap-12 lg:grid-cols-2 items-center">
               <div>
@@ -56,7 +54,7 @@ export function PageShell({
                 </div>
               </div>
               
-              <div className="flex h-full min-h-[380px] w-full items-center justify-center rounded border border-slate-700 bg-slate-800 text-center relative overflow-hidden shadow-xl">
+              <div className="relative flex h-full min-h-[380px] w-full items-center justify-center overflow-hidden rounded-xl border border-slate-700 bg-slate-800 text-center shadow-xl">
                 {imageSrc ? (
                   <Image src={imageSrc} alt={title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                 ) : (
@@ -72,9 +70,9 @@ export function PageShell({
         </section>
 
         {/* PAGE CONTENT */}
-        <section className="py-20 lg:py-28 bg-slate-50">
+        <section className="bg-slate-50 py-20 lg:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <div className="rounded border border-slate-200 bg-white p-8 sm:p-12 shadow-sm">
+            <div className="rounded-xl border border-slate-200 bg-white p-8 shadow-sm sm:p-12">
               {children}
             </div>
           </div>

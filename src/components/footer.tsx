@@ -5,11 +5,11 @@ import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto overflow-hidden border-t-4 border-red-700 bg-slate-900 py-14 text-white relative">
+    <footer className="relative mt-auto overflow-hidden border-t-4 border-red-700 bg-slate-900 py-14 text-white">
       <div className="container mx-auto relative z-10 grid grid-cols-1 gap-10 px-4 sm:px-6 md:grid-cols-4 md:gap-8">
         <div className="md:col-span-1">
           <Link href="/" className="inline-flex items-center gap-3 group">
-            <span className="flex h-[48px] w-[48px] items-center justify-center overflow-hidden rounded bg-white transition-colors group-hover:bg-slate-100">
+            <span className="flex h-[48px] w-[48px] items-center justify-center overflow-hidden rounded-md bg-white transition-colors group-hover:bg-slate-100">
               <Image
                 src="/images/logo/MM%20VALAVE%20SYMBOLE.png"
                 alt="M.M. Valves symbol"
@@ -18,7 +18,7 @@ export default function Footer() {
                 className="h-auto w-[48px] object-contain"
               />
             </span>
-            <span className="text-[1.65rem] font-black uppercase tracking-wide text-white transition-colors group-hover:text-slate-100">
+            <span className="text-[1.52rem] font-black uppercase tracking-wide text-white transition-colors group-hover:text-slate-100">
               M.M. VALVES
             </span>
           </Link>
@@ -107,7 +107,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="container mx-auto relative z-10 mt-16 flex flex-col items-start justify-between gap-4 border-t border-slate-800 px-4 pt-8 text-xs text-slate-500 sm:px-6 md:flex-row md:items-center">
+      <div className="container mx-auto relative z-10 mt-14 flex flex-col items-start justify-between gap-4 border-t border-slate-800 px-4 pt-8 text-xs text-slate-500 sm:px-6 md:flex-row md:items-center">
         <p className="font-medium uppercase tracking-wider">(c) {new Date().getFullYear()} M.M. Valves. All rights reserved.</p>
         <div className="flex flex-wrap gap-6 font-bold uppercase tracking-wider">
           <Link href="/privacy" className="transition-colors hover:text-white">

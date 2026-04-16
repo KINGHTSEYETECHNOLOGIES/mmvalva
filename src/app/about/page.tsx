@@ -1,99 +1,122 @@
 import type { Metadata } from "next";
-
-import { Award, Briefcase, Globe, PenTool, Factory } from "lucide-react";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About | M.M. Valves",
   description:
-    "Learn about M.M. Valves, our journey since 2014, and our precision-driven manufacturing strength.",
+    "M.M. Valves company profile, manufacturing infrastructure, quality commitment, and growth journey since 2014.",
 };
 
 export default function AboutPage() {
   return (
-    <main className="flex flex-col min-h-screen bg-white">
-      {/* PAGE HEADER */}
-      <section className="bg-slate-900 pt-24 pb-16 border-b-4 border-red-700">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
-          <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded bg-slate-800 text-slate-300 text-xs font-bold uppercase tracking-wider mb-6">
-            <Factory className="w-4 h-4" />
-            <span>Our Journey</span>
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight mb-6">
-            A Precision Engineering Legacy
-          </h1>
-          <p className="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-3xl mx-auto">
-            For over a decade, we have grown through consistent process discipline, technical quality, and long-term customer trust in manufacturing robust engine valves.
-          </p>
-        </div>
-      </section>
+    <main className="flex min-h-screen flex-col bg-slate-100">
+      <section className="py-10 sm:py-12 lg:py-14">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <header className="mb-9 sm:mb-10">
+            <h1 className="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
+              M.M. Valves - Precision Engine Valve Manufacturer
+            </h1>
+            <p className="mt-2 text-sm font-semibold text-slate-600">Crafting Reliability Since 2014</p>
+          </header>
 
-      {/* CORE INFO */}
-      <section className="py-20 lg:py-28 bg-white border-b border-slate-200">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2">
-            
-            <article className="bg-slate-50 p-8 lg:p-12 border border-slate-200 rounded-lg">
-              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded bg-slate-200 text-slate-700">
-                <Briefcase className="h-7 w-7" />
+          <div className="space-y-10 sm:space-y-12">
+            <article className="grid items-center gap-6 lg:grid-cols-2 lg:gap-10">
+              <div className="relative h-72 overflow-hidden rounded-xl bg-white shadow-sm sm:h-80">
+                <Image
+                  src="/images/about/Company Introduction.jpg"
+                  alt="M.M. Valves facility exterior"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
               </div>
-              <h2 className="text-2xl lg:text-3xl font-black uppercase text-slate-900 mb-6 tracking-wide">Who We Are</h2>
-              <p className="text-lg text-slate-700 leading-relaxed mb-6">
-                Founded on the principles of mechanical excellence, M.M. Valves is a tier-grade manufacturing partner specializing in diesel, commercial, and automotive engine valves. From heavy-duty agriculture machinery to passenger vehicles, our metallurgical expertise spans the full scope of internal combustion platforms.
-              </p>
-              <p className="text-lg text-slate-700 leading-relaxed">
-                We operate not just as a fabricator, but as a strategic engineering partner. Our facilities integrate advanced CAD modeling, custom forging processes, and highly calibrated CNC machining centers to ensure dimensional accuracy down to the tightest tolerances required by modern engine platforms.
-              </p>
-            </article>
-
-            <article className="bg-slate-50 p-8 lg:p-12 border border-slate-200 rounded-lg">
-              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded bg-red-100 text-red-700">
-                <Globe className="h-7 w-7" />
-              </div>
-              <h2 className="text-2xl lg:text-3xl font-black uppercase text-slate-900 mb-6 tracking-wide">Vision & Mission</h2>
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-lg font-bold text-slate-900 uppercase tracking-widest mb-2 border-b-2 border-red-700 inline-block pb-1">Vision</h3>
-                  <p className="text-lg text-slate-700 leading-relaxed">
-                    To be recognized globally as the most dependable and technically proficient engine valve manufacturer, setting new benchmarks in hot-cycle durability and frictionless supply chain integration.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-slate-900 uppercase tracking-widest mb-2 border-b-2 border-red-700 inline-block pb-1">Mission</h3>
-                  <p className="text-lg text-slate-700 leading-relaxed">
-                    To deliver highly durable, thermally stable, and dimensionally flawless valves. We bypass superficial marketing to focus entirely on structured engineering, repeatable precision, and building rigorous commercial flows for international export orders.
-                  </p>
-                </div>
+              <div>
+                <h2 className="text-4xl font-black tracking-tight text-slate-900">Company Introduction</h2>
+                <p className="mt-4 text-base leading-relaxed text-slate-700 sm:text-lg">
+                  Founded in 2014 by Mr. Sukhdevsinh Jadeja, M.M. Valves is a professionally managed manufacturing company specializing in diesel and automotive engine valves. From the beginning, the company has focused on precision engineering, process control, and consistent quality, enabling strong and long-term relationships with OEM and aftermarket customers.
+                </p>
+                <p className="mt-4 text-base leading-relaxed text-slate-700 sm:text-lg">
+                  With continuous investment in in-house manufacturing capabilities, advanced machinery, and quality systems, M.M. Valves has established itself as a reliable engine valve manufacturing partner for customers who value performance, durability, and supply reliability.
+                </p>
               </div>
             </article>
 
-          </div>
-        </div>
-      </section>
+            <article className="grid items-center gap-6 lg:grid-cols-2 lg:gap-10">
+              <div className="order-2 lg:order-1">
+                <h2 className="text-4xl font-black tracking-tight text-slate-900">Manufacturing Strength and Infrastructure</h2>
+                <p className="mt-4 text-base leading-relaxed text-slate-700 sm:text-lg">
+                  M.M. Valves operates with a fully integrated manufacturing setup, allowing complete control over quality and production consistency.
+                </p>
+                <ul className="mt-3 list-disc space-y-1.5 pl-6 text-base leading-relaxed text-slate-700 sm:text-lg">
+                  <li>In-house forging facility for better material control and strength</li>
+                  <li>CNC machining centers for high-precision valve manufacturing</li>
+                  <li>Grinding machines and automatic seat grinders for dimensional accuracy</li>
+                  <li>Strengthening and finishing machines to enhance durability</li>
+                  <li>Robotic automation implemented in CNC operations to improve consistency and efficiency</li>
+                  <li>Well-organized packaging system ensuring safe handling and dispatch</li>
+                </ul>
+                <p className="mt-3 text-base font-semibold text-slate-900 sm:text-lg">Manufacturing Area: 4,500 sq. ft.</p>
+                <p className="mt-1 text-base leading-relaxed text-slate-700 sm:text-lg">
+                  This compact yet efficient facility is optimized for OEM-grade production and process discipline.
+                </p>
+              </div>
+              <div className="order-1 relative h-72 overflow-hidden rounded-xl bg-white shadow-sm sm:h-80 lg:order-2">
+                <Image
+                  src="/images/about/Manufacturing Strength & Infrastructure.jpg"
+                  alt="M.M. Valves production area"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            </article>
 
-      {/* CAPABILITIES */}
-      <section className="py-20 lg:py-28 bg-slate-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <p className="text-sm font-bold uppercase tracking-widest text-red-700 mb-4">Capabilities</p>
-            <h2 className="text-3xl sm:text-4xl font-black uppercase text-slate-900 tracking-tight">The Architecture of Our Success</h2>
-          </div>
-          
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { title: "Legacy", desc: "Established in 2014 with continuous technical growth", icon: Award },
-              { title: "Engineering", desc: "In-house technical team and CAD design studio", icon: PenTool },
-              { title: "Infrastructure", desc: "Automated forging and CNC grinding centers", icon: Briefcase },
-              { title: "Global Reach", desc: "Export-ready operations with global logistics", icon: Globe },
-            ].map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.title} className="flex flex-col bg-white border border-slate-200 p-8 rounded-lg transition-colors hover:border-slate-800">
-                  <Icon className="h-8 w-8 text-slate-800 mb-6" />
-                  <h3 className="font-bold text-slate-900 uppercase text-lg tracking-wide mb-3">{item.title}</h3>
-                  <p className="text-slate-600 leading-relaxed flex-1">{item.desc}</p>
-                </div>
-              )
-            })}
+            <article className="grid items-center gap-6 lg:grid-cols-2 lg:gap-10">
+              <div className="relative h-72 overflow-hidden rounded-xl bg-white shadow-sm sm:h-80">
+                <Image
+                  src="/Quality Inspection .jpg"
+                  alt="Quality inspection process"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-4xl font-black tracking-tight text-slate-900">Quality Commitment</h2>
+                <p className="mt-4 text-base leading-relaxed text-slate-700 sm:text-lg">
+                  Quality at M.M. Valves is built into every stage of production. Our structured manufacturing processes, skilled workforce, and controlled inspection systems ensure:
+                </p>
+                <ul className="mt-3 list-disc space-y-1.5 pl-6 text-base leading-relaxed text-slate-700 sm:text-lg">
+                  <li>Consistent product quality.</li>
+                  <li>Reliable batch-to-batch performance.</li>
+                  <li>Compliance with OEM technical requirements.</li>
+                </ul>
+                <p className="mt-3 text-base leading-relaxed text-slate-700 sm:text-lg">
+                  This commitment to quality has enabled us to successfully collaborate with OEM customers and support them with dependable supply and performance.
+                </p>
+              </div>
+            </article>
+
+            <article className="grid items-center gap-6 lg:grid-cols-2 lg:gap-10">
+              <div className="order-2 lg:order-1">
+                <h2 className="text-4xl font-black tracking-tight text-slate-900">Company History and Growth</h2>
+                <ul className="mt-4 space-y-2 text-base leading-relaxed text-slate-700 sm:text-lg">
+                  <li><span className="font-bold text-slate-900">2014</span> - Company founded; diesel engine valve manufacturing initiated.</li>
+                  <li><span className="font-bold text-slate-900">2015</span> - Began collaboration with OEM customers.</li>
+                  <li><span className="font-bold text-slate-900">2016</span> - Expanded into automotive engine valve manufacturing.</li>
+                  <li><span className="font-bold text-slate-900">2019</span> - Launched aftermarket brand in India and export brand AJ Automotive.</li>
+                </ul>
+              </div>
+              <div className="order-1 relative h-72 overflow-hidden rounded-xl bg-white shadow-sm sm:h-80 lg:order-2">
+                <Image
+                  src="/Robotic Arm.jpg"
+                  alt="Robotic CNC manufacturing"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            </article>
           </div>
         </div>
       </section>

@@ -12,33 +12,33 @@ export const metadata: Metadata = {
 const exportProducts = [
   {
     title: "Engine Valves",
-    copy: "Engine valves control intake airflow and exhaust gas release. High-quality valves support smoother breathing, stable performance, and long service life.",
-    image: "/images/export/Engine Valves.jpg",
+    copy: "Engine valves control the flow of air-fuel mixture and exhaust gases inside the engine. Intake valves allow fresh air and fuel to enter, while exhaust valves release burnt gases. High-quality engine valves ensure smooth engine breathing, better performance, and longer engine life.",
+    image: "/images/export/Engine-Valves-latest.jpg",
   },
   {
     title: "Valve Guides",
-    copy: "Valve guides keep valves aligned for smooth up-down movement, lower wear, reduced leakage risk, and consistent operation efficiency.",
-    image: "/images/export/Valve Guides.jpg",
+    copy: "Valve guides keep the engine valves perfectly aligned and ensure smooth up-and-down movement. They reduce wear, prevent gas leakage, and improve engine efficiency by maintaining accurate valve operation.",
+    image: "/images/export/Valve-Guides-latest.jpg",
   },
   {
     title: "Connecting Rods",
-    copy: "Connecting rods transfer piston force to the crankshaft and convert linear motion into rotation for dependable power transmission.",
-    image: "/images/export/AJ1 connecting Rod.jpg",
+    copy: "Connecting rods transfer power from the piston to the crankshaft, converting linear motion into rotation. Strong and precision-engineered connecting rods ensure reliable power transmission and smooth engine operation.",
+    image: "/images/export/Connecting-Rods-latest.jpg",
   },
   {
     title: "Rocker Arms",
-    copy: "Rocker arms control valve opening and closing through camshaft motion transfer, helping maintain combustion and timing stability.",
-    image: "/images/export/AJ1 Rocker Arm.jpg",
+    copy: "Rocker arms control the opening and closing of engine valves by transferring motion from the camshaft. Proper valve timing through rocker arms ensures smooth combustion, better fuel efficiency, and improved engine performance.",
+    image: "/images/export/Rocker-Arms-latest.jpg",
   },
   {
     title: "Cylinder Sleeves",
-    copy: "Cylinder sleeves provide a durable low-friction surface for piston movement, helping protect blocks and improve heat dissipation.",
-    image: "/images/export/Cylinder Sleeves.jpg",
+    copy: "Cylinder sleeves provide a smooth and durable surface for piston movement. They protect the engine block from wear, improve heat dissipation, and increase the overall life of the engine.",
+    image: "/images/export/Cylinder-Sleeves-latest.jpg",
   },
   {
     title: "Air Cool Block",
-    copy: "Air-cooled engine blocks use fin-driven airflow to regulate temperature and deliver reliable operation in compact engine platforms.",
-    image: "/images/export/Air Cool Block.webp",
+    copy: "Air-cooled engine blocks use airflow and cooling fins to regulate engine temperature. They are ideal for motorcycles, generators, and small engines, offering efficient cooling, simple design, and reliable performance.",
+    image: "/images/export/Air-Cool-Block-latest.jpg",
   },
 ];
 
@@ -120,7 +120,7 @@ export default function ExportPage() {
                     loading={index === 0 ? "eager" : "lazy"}
                     priority={index === 0}
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-contain p-4"
+                    className="object-contain bg-white p-3"
                   />
                 </div>
                 <div className="p-8">
