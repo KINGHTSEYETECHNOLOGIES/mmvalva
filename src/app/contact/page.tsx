@@ -66,8 +66,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold uppercase tracking-widest text-sm text-slate-400 mb-2">Sales & Export Inquiries</h3>
-                    <a href="mailto:mmvalvesrajkot@gmail.com" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors">
-                      mmvalvesrajkot@gmail.com
+                    <a href="mailto:jayvirsinh@mmvalves.com" className="text-lg leading-relaxed text-slate-200 hover:text-red-400 transition-colors">
+                      jayvirsinh@mmvalves.com
                     </a>
                   </div>
                 </li>
