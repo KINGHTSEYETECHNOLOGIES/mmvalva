@@ -15,7 +15,8 @@ export default function Footer() {
                 alt="M.M. Valves symbol"
                 width={48}
                 height={48}
-                className="h-auto w-[48px] object-contain"
+                className="object-contain"
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
             <span className="text-[1.65rem] font-black uppercase tracking-wide text-white transition-colors group-hover:text-slate-100">

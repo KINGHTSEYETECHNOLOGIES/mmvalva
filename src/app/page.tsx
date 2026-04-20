@@ -45,22 +45,23 @@ const productFamilies = [
   {
     title: "Diesel Engine Valves",
     copy: "Heavy-duty valves built for maximum load and heat resistance in commercial applications.",
-    image: "/images/home/Diesel Engine Valves.jpg",
+    image: "/images/home/Diesel Engine Valves.png",
+    imageClass: "scale-110",
   },
   {
     title: "Automotive Engine Valves",
     copy: "Precision valves precision-engineered for passenger vehicles and light trucks.",
-    image: "/images/home/Automotive Engine Valves.jpg",
+    image: "/images/home/Automotive Engine Valves v2.jpg",
   },
   {
     title: "Industrial Valves",
     copy: "Robust designs for stationary engines, generators, and heavy machinery.",
-    image: "/images/home/Industrial valve.jpg",
+    image: "/images/home/Industrial valve v2.jpg",
   },
   {
     title: "Custom Solutions",
     copy: "Manufactured exactly to your blueprints, materials, and specialized requirements.",
-    image: "/images/home/Custom Solutions.webp",
+    image: "/images/home/Custom Solutions v2.webp",
   },
 ];
 
@@ -94,7 +95,7 @@ export default function HomePage() {
           <div className="flex-1 w-full relative">
             <div className="aspect-video lg:aspect-[4/3] rounded-lg border-4 border-slate-300 overflow-hidden shadow-lg bg-slate-200 relative">
               <Image
-                src="/images/home/Home page image.webp"
+                src="/images/home/Home page image v2.webp"
                 alt="Engine valves showcase"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -134,35 +135,37 @@ export default function HomePage() {
       </section>
 
       {/* PRODUCTS OVERVIEW SECTION */}
-      <section className="py-20 lg:py-28 bg-slate-900 text-white">
+      <section className="py-20 lg:py-28 bg-white border-b border-slate-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-16">
             <div className="max-w-2xl">
-              <h2 className="text-3xl sm:text-4xl font-black uppercase tracking-tight">Product Categories</h2>
-              <p className="mt-4 text-slate-400 text-lg">
+              <h2 className="text-3xl sm:text-4xl font-black uppercase tracking-tight text-slate-900">Product Categories</h2>
+              <p className="mt-4 text-slate-600 text-lg">
                 Engine valves engineered for specific operational environments.
               </p>
             </div>
-            <Link href="/products" className="inline-flex items-center gap-2 text-red-400 hover:text-red-300 font-bold uppercase tracking-wider transition-colors">
+            <Link href="/products" className="inline-flex items-center gap-2 text-red-700 hover:text-red-800 font-bold uppercase tracking-wider transition-colors">
               See All Products <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {productFamilies.map((product, index) => (
-              <div key={index} className="flex flex-col sm:flex-row gap-6 bg-slate-800 p-6 sm:p-8 rounded-lg border border-slate-700">
-                <div className="w-full sm:w-1/3 aspect-square bg-slate-700 rounded border border-slate-600 flex-shrink-0 relative overflow-hidden">
+              <div key={index} className="flex flex-col sm:flex-row gap-6 bg-white p-6 sm:p-8 rounded-lg border border-slate-200 shadow-sm">
+                <div className="w-full sm:w-[38%] aspect-[4/3] bg-white rounded border border-slate-200 flex-shrink-0 relative overflow-hidden p-2">
                   <Image
                     src={product.image}
                     alt={product.title}
                     fill
-                    sizes="(max-width: 640px) 100vw, 33vw"
-                    className="object-cover"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    priority={index === 0}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 42vw, 18vw"
+                    className={`object-contain transition-transform duration-300 ${product.imageClass ?? ""}`}
                   />
                 </div>
                 <div className="flex flex-col justify-center">
-                  <h3 className="text-2xl font-bold uppercase tracking-wide mb-3">{product.title}</h3>
-                  <p className="text-slate-400 leading-relaxed">{product.copy}</p>
+                  <h3 className="text-2xl font-bold uppercase tracking-wide mb-3 text-slate-900">{product.title}</h3>
+                  <p className="text-slate-600 leading-relaxed">{product.copy}</p>
                 </div>
               </div>
             ))}

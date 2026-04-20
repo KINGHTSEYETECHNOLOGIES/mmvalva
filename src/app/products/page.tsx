@@ -15,14 +15,15 @@ const products = [
     app: "Heavy-duty commercial & industrial diesel applications",
     desc: "Built to withstand the enormous thermal loads and extended service cycles demanded by mass-moving transport, agricultural machinery, and heavy industrial machinery.",
     features: ["Bimetallic friction welding", "Stellite armored seats", "Chrome-plated stems"],
-    image: "/images/Products/Diesel Engine Valves.jpg",
+    image: "/images/home/Diesel Engine Valves.png",
+    imageClass: "scale-110",
   },
   {
     title: "Automotive Engine Valves",
     app: "Passenger & light commercial vehicles",
     desc: "High-volume, production-ready solutions optimized for fuel efficiency, low-noise sealing, and high-RPM thermal stability required by modern passenger cabins.",
     features: ["Nitrided finish options", "Induction hardened stems", "Precision concentricity"],
-    image: "/images/Products/Automotive Engine Valves.jpg",
+    image: "/images/home/Automotive Engine Valves v2.jpg",
   },
   {
     title: "Inlet Valves",
@@ -43,7 +44,7 @@ const products = [
     app: "Application-specific performance needs",
     desc: "Bespoke short-run and prototype valve development built exactly to OEM blueprints or aftermarket performance upgrade specs.",
     features: ["Custom prototyping", "Specialty alloy sourcing", "Performance modification"],
-    image: "/images/Products/Custom Valve Solutions.webp",
+    image: "/images/home/Custom Solutions v2.webp",
   },
 ];
 
@@ -51,7 +52,7 @@ export default function ProductsPage() {
   return (
     <main className="flex flex-col min-h-screen bg-white">
       {/* PAGE HEADER */}
-      <section className="py-12 sm:py-14 lg:py-16">
+      <section className="bg-slate-900 pt-24 pb-16 border-b-4 border-red-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded bg-slate-800 text-slate-300 text-xs font-bold uppercase tracking-wider mb-6">
             <PackageSearch className="w-4 h-4" />
@@ -60,14 +61,14 @@ export default function ProductsPage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight mb-6">
             Precision Components Tailored by Application
           </h1>
-          <p className="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
             Our engineering portfolio spans the full spectrum of internal combustion demands, offering robust material combinations and advanced coatings to solve specific thermal, dimensional, and environmental challenges.
           </p>
         </div>
       </section>
 
       {/* PRODUCTS GRID */}
-      <section className="py-20 lg:py-28 bg-slate-100">
+      <section className="py-20 lg:py-28 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2">
             
@@ -78,11 +79,10 @@ export default function ProductsPage() {
                     src={product.image}
                     alt={product.title}
                     fill
-                    unoptimized
                     loading={index === 0 ? "eager" : "lazy"}
                     priority={index === 0}
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-contain"
+                    className={`object-contain transition-transform duration-300 ${product.imageClass ?? ""}`}
                   />
                 </div>
                 

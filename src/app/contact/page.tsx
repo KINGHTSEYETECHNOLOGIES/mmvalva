@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
-import { ArrowRight, Mail, MapPin, Phone, MessageSquare } from "lucide-react";
+import { Mail, MapPin, Phone, MessageSquare } from "lucide-react";
+import ContactForm from "@/components/contact-form";
 
 export const metadata: Metadata = {
   title: "Contact | M.M. Valves",
@@ -37,37 +38,7 @@ export default function ContactPage() {
               <h2 className="text-2xl font-black uppercase text-slate-900 mb-8 border-b-2 border-red-700 inline-block pb-2">
                 Technical Inquiry
               </h2>
-              <form className="grid gap-6 md:grid-cols-2" aria-label="Inquiry form">
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-bold text-slate-700 uppercase tracking-widest">Company Name *</label>
-                  <input className="border border-slate-300 bg-white p-4 text-slate-900 focus:border-red-700 outline-none transition-colors rounded" required />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-bold text-slate-700 uppercase tracking-widest">Contact Person *</label>
-                  <input className="border border-slate-300 bg-white p-4 text-slate-900 focus:border-red-700 outline-none transition-colors rounded" required />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-bold text-slate-700 uppercase tracking-widest">Email Address *</label>
-                  <input className="border border-slate-300 bg-white p-4 text-slate-900 focus:border-red-700 outline-none transition-colors rounded" type="email" required />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-bold text-slate-700 uppercase tracking-widest">Phone Number</label>
-                  <input className="border border-slate-300 bg-white p-4 text-slate-900 focus:border-red-700 outline-none transition-colors rounded" />
-                </div>
-                <div className="flex flex-col gap-2 md:col-span-2">
-                  <label className="text-xs font-bold text-slate-700 uppercase tracking-widest">Application or Engine Model *</label>
-                  <input className="border border-slate-300 bg-white p-4 text-slate-900 focus:border-red-700 outline-none transition-colors rounded" required />
-                </div>
-                <div className="flex flex-col gap-2 md:col-span-2">
-                  <label className="text-xs font-bold text-slate-700 uppercase tracking-widest">Required Volume & Specifications *</label>
-                  <textarea className="min-h-[160px] border border-slate-300 bg-white p-4 text-slate-900 focus:border-red-700 outline-none transition-colors rounded resize-y" required></textarea>
-                </div>
-                
-                <button className="inline-flex justify-center items-center gap-2 bg-red-700 hover:bg-red-800 text-white font-bold uppercase tracking-wider px-8 py-4 rounded transition-colors md:col-span-2 md:justify-self-start" type="submit">
-                  Submit Details
-                  <ArrowRight className="h-4 w-4" />
-                </button>
-              </form>
+              <ContactForm />
             </div>
 
             {/* Contact Details Section */}

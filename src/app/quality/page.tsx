@@ -28,7 +28,7 @@ export default function QualityPage() {
               src="/Quality Inspection .jpg"
               alt="Quality inspection facility"
               fill
-              sizes="100vw"
+              sizes="(max-width: 1024px) 100vw, 896px"
               className="object-cover"
             />
           </div>
@@ -49,7 +49,7 @@ export default function QualityPage() {
       <section className="py-20 lg:py-28 bg-white border-b border-slate-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {checks.map((item, idx) => {
+            {checks.map((item) => {
               const Icon = item.icon;
               return (
                 <article key={item.name} className="flex flex-col bg-slate-50 border border-slate-200 p-8 rounded-lg transition-colors hover:border-slate-800">
