@@ -45,7 +45,7 @@ export default function SiteHeader() {
             </span>
           </span>
         </Link>
-        <nav className="hidden items-center justify-center gap-7 text-sm font-bold uppercase tracking-wider text-slate-300 lg:flex">
+        <nav className="hidden items-center justify-center gap-4 text-xs font-bold uppercase tracking-wider text-slate-300 xl:flex 2xl:gap-7 2xl:text-sm">
           <Link href="/" className="transition-colors hover:text-white hover:text-red-400">
             Home
           </Link>
@@ -64,12 +64,15 @@ export default function SiteHeader() {
           <Link href="/quality" className="transition-colors hover:text-white hover:text-red-400">
             Quality
           </Link>
+          <Link href="/certificates" className="transition-colors hover:text-white hover:text-red-400">
+            Certificates
+          </Link>
         </nav>
         <div className="flex items-center gap-3 justify-self-end">
           <button
             type="button"
             onClick={() => setMobileOpen((prev) => !prev)}
-            className="inline-flex items-center justify-center rounded border border-slate-700 p-2 text-slate-200 transition-colors hover:border-slate-500 hover:text-white lg:hidden"
+            className="inline-flex items-center justify-center rounded border border-slate-700 p-2 text-slate-200 transition-colors hover:border-slate-500 hover:text-white xl:hidden"
             aria-label="Toggle navigation menu"
             aria-expanded={mobileOpen}
           >
@@ -83,7 +86,7 @@ export default function SiteHeader() {
       </div>
 
       {mobileOpen ? (
-        <div className="lg:hidden border-t border-slate-800 bg-slate-950/95 backdrop-blur">
+        <div className="xl:hidden border-t border-slate-800 bg-slate-950/95 backdrop-blur">
           <nav className="container mx-auto flex flex-col gap-1 px-4 py-4 sm:px-6">
             {[
               ["Home", "/"],
@@ -92,6 +95,7 @@ export default function SiteHeader() {
               ["Export", "/export"],
               ["Manufacturing", "/manufacturing"],
               ["Quality", "/quality"],
+              ["Certificates", "/certificates"],
               ["Contact", "/contact"],
             ].map(([label, href]) => (
               <Link

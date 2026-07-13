@@ -84,6 +84,28 @@ export default function ContactPage() {
                   </div>
                 </li>
               </ul>
+
+              <div className="mt-10 overflow-hidden rounded-lg border border-slate-700 bg-slate-800">
+                <div className="flex items-center justify-between gap-4 border-b border-slate-700 px-4 py-3">
+                  <div className="flex items-center gap-2">
+                    <MapPin className="h-4 w-4 text-red-500" />
+                    <h3 className="text-xs font-bold uppercase tracking-widest text-slate-300">
+                      Find Us
+                    </h3>
+                  </div>
+                  <span className="text-[0.68rem] font-medium text-slate-500">
+                    22.272639, 70.797361
+                  </span>
+                </div>
+                <iframe
+                  src="https://www.google.com/maps?q=22.2726389,70.7973611&z=17&output=embed"
+                  title="M.M. Valves corporate office location"
+                  className="h-72 w-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
+              </div>
             </div>
 
           </div>
